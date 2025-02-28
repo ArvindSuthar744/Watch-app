@@ -10,20 +10,17 @@ import Cartpage from './Pages/Cartpage'
 import Checkoutpage from './Pages/Checkoutpage'
 import SingleProductViewpage from './Pages/SingleProductViewpage'
 import { Provider } from 'react-redux'
-import store from './Context-Api/Store'
+import Store from './Context-Api/store.js'
 import { ToastContainer } from 'react-toastify'
-
 
 
 function App() {
 
 
-
   return (
     <>
       <div className="bg-white text-white font-intermedium relative scroll-m-40">
-
-          <Provider store={store}>
+          <Provider store={Store}>
           <BrowserRouter> 
             <Navigation />
             <ToastContainer/>
@@ -39,8 +36,6 @@ function App() {
             <Footer />
           </BrowserRouter>
           </Provider>
-
-
       </div>
     </>
   )

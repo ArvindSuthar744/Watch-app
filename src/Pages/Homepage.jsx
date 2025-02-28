@@ -6,13 +6,11 @@ import Slider from '../Components/Slider.jsx';
 import { useDispatch } from 'react-redux';
 import { addtoCart } from '../Context-Api/cartSlice.js';
 
-
 function Homepage() {
 
   const defaultproducts = products.filter((value) => value.featured === true)
   const [product, setProduct] = useState(defaultproducts);
   const latest_products = products.filter((value) => value.latest === true);
-  console.log(latest_products)
 
   const handlerfeatured = () => {
     let pro = products.filter((value) => value.featured === true);

@@ -29,10 +29,10 @@ function Cartpage() {
   return (
     <>
       <div className="bg-white text-black min-h-screen p-6 pt-24">
-        <h1 className="text-2xl  text-center  max-md:text-lg">Shopping Cart</h1>
-        <div className="my-2">
+        <h1 className="text-2xl  text-center pb-5  max-md:text-lg">Shopping Cart</h1>
+        {/* <div className="my-2">
           <Link to='/' className="py-1 px-2 max-lg:text-sm bg-black text-white rounded-lg">Go Back</Link>
-        </div>
+        </div> */}
 
         <div className="max-w-4xl mx-auto bg-[#EFF3EA] rounded-lg shadow-lg p-6">
           {Cart.cart.length > 0 ? (

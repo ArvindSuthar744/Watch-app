@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
@@ -8,6 +9,7 @@ function Navigation () {
     const Navmenu = () => {
         setNavbar(!navbar);
     };
+    const cart = useSelector(state => state.cart)
 
     return (
         <div className='w-full fixed top-0 right-0 left-0 z-10'>
@@ -41,7 +43,7 @@ function Navigation () {
                             <Link to='/cartpage' className=' focus:text-red-600 text-[16px] max-lg:text-lg duration-200' onClick={Navmenu}>
                                 <i className="fa-solid fa-cart-shopping text-[16px] pr-1 " ></i>
                                 Cart 
-                                {/* {cart.length > 0 ? `${cart.length}`: "" } */}
+                                {cart.cart.length > 0 ? `${cart.cart.length}`: "" }
                             </Link>
                         </li>
                     </ul>
